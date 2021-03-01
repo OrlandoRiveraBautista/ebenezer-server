@@ -62,6 +62,6 @@
     "PAYPALClientID": "@paypalclientid",
     "PAYPALClientSecret": "@paypalclientsecret",
     "JWT_KEY": "@jwt_key",
-    "FRONT_URL": "https://ebenezer-virtual.herokuapp.com/"
+    "FRONT_URL": "@front_url"
   }
 }
