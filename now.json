@@ -56,12 +56,12 @@
   "env": {
     "GOOGLE_API_KEY": "@google_api_key",
     "ORLANDOPASSWORD": "@orlandopassword",
-    "AWSAccessKeyId": "AKIAJCAQXZWYLHYO2BOA",
-    "AWSSecretKey": "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",
-    "S3BucketName": "ebenezerimages",
-    "PAYPALClientID": "AXZzIItu4fYG-SOQCS2O_Z5Tst6XG4TI9yXeDgbj7BnMmfMC5Swg3qXh_3zkrNr5RJOicdODGYgepSX2",
-    "PAYPALClientSecret": "EEPKt0Kx52kQqvtEty57GF6D_ygwZQRC7fyxfXf0-tQoxjJrMnWDmu5Xjz_hHoGhWtRSRw4oVNdr6pKf",
-    "JWT_KEY": "$2mwkzUhPPiNXy}",
+    "AWSAccessKeyId": "@awsaccesskeyid",
+    "AWSSecretKey": "@awssecretkey",
+    "S3BucketName": "@s3bucketname",
+    "PAYPALClientID": "@paypalclientid",
+    "PAYPALClientSecret": "@paypalclientsecret",
+    "JWT_KEY": "@jwt_key",
     "FRONT_URL": "https://ebenezer-virtual.herokuapp.com/"
   }
 }
