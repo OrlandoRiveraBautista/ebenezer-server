@@ -38,19 +38,20 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(morgan("tiny"));
 // const whitelist = [`${process.env.FRONT_URL}`, "http://localhost:3000"];
-app.use(
-  cors({
-    // origin:
-    // function (origin, callback) {
-    //   if (whitelist.indexOf(origin) !== -1) {
-    //     callback(null, true);
-    //   } else {
-    //     callback(new Error("Not allowed by CORS"));
-    //   }
-    // },
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin:
+//     function (origin, callback) {
+//       if (whitelist.indexOf(origin) !== -1) {
+//         callback(null, true);
+//       } else {
+//         callback(new Error("Not allowed by CORS"));
+//       }
+//     },
+//     credentials: true,
+//   })
+// );
+app.use(cors());
 
 // URL to connect to MongoDB
 const uri = `mongodb+srv://Orlando:${process.env.ORLANDOPASSWORD}@testcluster-tter6.mongodb.net/ebenezer?retryWrites=true&w=majority`;
