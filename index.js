@@ -312,7 +312,7 @@ app.post(
 );
 
 // Getting the saved Posts ---------------------------------------------------------------------------
-app.get("/posts", async (req, res) => {
+app.get("/posts", cors(), async (req, res) => {
   // connecting to database
   await mongoose
     .connect(uri, { useUnifiedTopology: true, useNewUrlParser: true })
