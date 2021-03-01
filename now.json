@@ -1,0 +1,67 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@now/node-server"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/videos",
+      "dest": "/index.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/latestvideo",
+      "dest": "/index.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/live",
+      "dest": "/index.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/posts/store",
+      "dest": "/index.js",
+      "methods": ["POST"]
+    },
+    {
+      "src": "/posts",
+      "dest": "/index.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/give",
+      "dest": "/index.js",
+      "methods": ["POST"]
+    },
+    {
+      "src": "/success",
+      "dest": "/index.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/signup",
+      "dest": "/index.js",
+      "methods": ["POST"]
+    },
+    {
+      "src": "/login",
+      "dest": "/index.js",
+      "methods": ["POST"]
+    }
+  ],
+  "env": {
+    "GOOGLE_API_KEY": "@google_api_key",
+    "ORLANDOPASSWORD": "@orlandopassword",
+    "AWSAccessKeyId": "AKIAJCAQXZWYLHYO2BOA",
+    "AWSSecretKey": "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",
+    "S3BucketName": "ebenezerimages",
+    "PAYPALClientID": "AXZzIItu4fYG-SOQCS2O_Z5Tst6XG4TI9yXeDgbj7BnMmfMC5Swg3qXh_3zkrNr5RJOicdODGYgepSX2",
+    "PAYPALClientSecret": "EEPKt0Kx52kQqvtEty57GF6D_ygwZQRC7fyxfXf0-tQoxjJrMnWDmu5Xjz_hHoGhWtRSRw4oVNdr6pKf",
+    "JWT_KEY": "$2mwkzUhPPiNXy}",
+    "FRONT_URL": "https://ebenezer-virtual.herokuapp.com/"
+  }
+}
