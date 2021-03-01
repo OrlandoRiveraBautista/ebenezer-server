@@ -30,6 +30,8 @@ require("dotenv").config();
 // Start express
 const app = express();
 
+app.use(cors({ origin: true }));
+
 // Setting bodyParser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -51,7 +53,6 @@ app.use(morgan("tiny"));
 //     credentials: true,
 //   })
 // );
-app.use(cors({ origin: true }));
 app.use((req, res, next) => {
   res.header(
     "Access-Control-Allow-Origin",
