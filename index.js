@@ -565,6 +565,7 @@ app.post("/signup", upload.array("file", 1), async (req, res) => {
 
 // LogIn users -------------------------------------
 app.post("/login", async (req, res) => {
+  console.log(req.body);
   // Connect to DB
   await mongoose
     .connect(uri, { useUnifiedTopology: true, useNewUrlParser: true })
