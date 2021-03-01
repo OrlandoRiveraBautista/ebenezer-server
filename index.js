@@ -55,7 +55,7 @@ app.use(cors());
 app.use((req, res, next) => {
   res.header(
     "Access-Control-Allow-Origin",
-    "https://ebenezer-virtual.herokuapp.com/"
+    "https://ebenezer-virtual.herokuapp.com"
   );
   res.header("Access-Control-Allow-Headers", true);
   res.header("Access-Control-Allow-Credentials", true);
