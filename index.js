@@ -52,6 +52,19 @@ app.use(morgan("tiny"));
 //   })
 // );
 app.use(cors());
+app.use((req, res, next) => {
+  res.header(
+    "Access-Control-Allow-Origin",
+    "https://ebenezer-virtual.herokuapp.com/"
+  );
+  res.header("Access-Control-Allow-Headers", true);
+  res.header("Access-Control-Allow-Credentials", true);
+  res.header(
+    "Access-Control-Allow-Methods",
+    "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+  );
+  next();
+});
 
 // URL to connect to MongoDB
 const uri = `mongodb+srv://Orlando:${process.env.ORLANDOPASSWORD}@testcluster-tter6.mongodb.net/ebenezer?retryWrites=true&w=majority`;
@@ -312,7 +325,7 @@ app.post(
 );
 
 // Getting the saved Posts ---------------------------------------------------------------------------
-app.get("/posts", cors(), async (req, res) => {
+app.get("/posts", async (req, res) => {
   // connecting to database
   await mongoose
     .connect(uri, { useUnifiedTopology: true, useNewUrlParser: true })
