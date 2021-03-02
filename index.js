@@ -41,14 +41,13 @@ app.use(morgan("tiny"));
 const whitelist = [
   `${process.env.FRONT_URL}`,
   "https://ebenezer-virtual.herokuapp.com",
-  "http://localhost:50809",
+  "http://localhost:3000",
   "https://iglesiaebenezer.netlify.app",
 ];
 app.use(
   cors({
     origin: function (origin, callback) {
       if (whitelist.indexOf(origin) !== -1) {
-        console.log(whitelist.indexOf(origin));
         callback(null, true);
       } else {
         callback(new Error("Not allowed by CORS"));
@@ -57,20 +56,6 @@ app.use(
     credentials: true,
   })
 );
-
-// app.use((req, res, next) => {
-//   res.header(
-//     "Access-Control-Allow-Origin",
-//     "https://ebenezer-virtual.herokuapp.com"
-//   );
-//   res.header("Access-Control-Allow-Headers", true);
-//   res.header("Access-Control-Allow-Credentials", true);
-//   res.header(
-//     "Access-Control-Allow-Methods",
-//     "GET, POST, OPTIONS, PUT, PATCH, DELETE"
-//   );
-//   next();
-// });
 
 // URL to connect to MongoDB
 const uri = `mongodb+srv://Orlando:${process.env.ORLANDOPASSWORD}@testcluster-tter6.mongodb.net/ebenezer?retryWrites=true&w=majority`;
