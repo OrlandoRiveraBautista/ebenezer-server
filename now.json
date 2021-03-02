@@ -56,8 +56,8 @@
   "env": {
     "GOOGLE_API_KEY": "@google_api_key",
     "ORLANDOPASSWORD": "@orlandopassword",
-    "AWSAccessKeyId": "@awsaccesskeyid",
-    "AWSSecretKey": "@awssecretkey",
+    "AWSAccessKeyId": "@aws-access-key-id",
+    "AWSSecretKey": "@aws-secret-key",
     "S3BucketName": "@s3bucketname",
     "PAYPALClientID": "@paypalclientid",
     "PAYPALClientSecret": "@paypalclientsecret",
