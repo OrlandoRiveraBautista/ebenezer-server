@@ -41,12 +41,14 @@ app.use(morgan("tiny"));
 const whitelist = [
   `${process.env.FRONT_URL}`,
   "https://ebenezer-virtual.herokuapp.com",
-  "http://localhost:3000",
+  "http://localhost:50809",
+  "https://iglesiaebenezer.netlify.app",
 ];
 app.use(
   cors({
     origin: function (origin, callback) {
       if (whitelist.indexOf(origin) !== -1) {
+        console.log(whitelist.indexOf(origin));
         callback(null, true);
       } else {
         callback(new Error("Not allowed by CORS"));
