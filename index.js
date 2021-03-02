@@ -40,8 +40,8 @@ app.use(morgan("tiny"));
 
 const whitelist = [
   `${process.env.FRONT_URL}`,
-  "http://localhost:3000",
   "https://ebenezer-virtual.herokuapp.com",
+  "http://localhost:3000",
 ];
 app.use(
   cors({
